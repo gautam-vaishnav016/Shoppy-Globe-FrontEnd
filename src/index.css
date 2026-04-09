@@ -1,1 +1,54 @@
 @import "tailwindcss";
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+}
+/* ===== SHOPPE DARK THEME ===== */
+@theme {
+  --breakpoint-xxs: 300px;
+  --breakpoint-xs: 420px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* dark theme colors */
+
+  --color-dark-primary: #8b5cf6;
+  --color-dark-secondary: #60a5fa;
+  --color-dark-accent: #fbbf24;
+  --color-dark-bg: #020617;
+  --color-dark-surface: #020617;
+  --color-dark-text: #e5e7eb;
+  --color-dark-muted: #94a3b8;
+  --color-dark-border: #1e293b;
+
+  /* light theme colors */
+  /* Adjusted light theme colors */
+  --color-light-primary: #8b5cf6; /* Your signature Teal */
+  --color-light-secondary: #60a5fa;
+  --color-light-accent: #fbbf24;
+
+  /* Changed from pure #ffffff to a soft slate/teal tint */
+  --color-light-bg: #f0f9f9;
+  /* Changed to a more distinct "card" color with a primary tint */
+  --color-light-surface: #e6f4f4;
+
+  --color-light-text: #0f172a; /* Deep slate for better contrast */
+  --color-light-muted: #475569; /* Clearer muted text */
+  --color-light-border: #cbd5e1; /* More visible borders */
+}
